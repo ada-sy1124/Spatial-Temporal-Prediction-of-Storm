@@ -1,0 +1,75 @@
+# project.toml - drop-in replacement for setup.py using PEP 621
+# Edit file as necessary for your project as things update.
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flood-tool"
+version = "1.0.0"
+description = "Flood tool package that contains tools to predict and assess flood risk in the United Kingdom"
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [
+    { name = "Kokkiligadda, Varun", email = "varun.kokkiligadda25@imperial.ac.uk" },
+    { name = "Chen, Qi", email = "qi.chen25@imperial.ac.uk" }
+    { name = "Yang, Ziqi", email = "ziqi.yang25@imperial.ac.uk" }
+    { name = "Wang, Jinyue", email = "jinyue.wang25@imperial.ac.uk" }
+    { name = "Yu, Zirui", email = "zirui.yu25@imperial.ac.uk" }
+    { name = "Yuan, Siyuan", email = "siyuan.yuan24@imperial.ac.uk" }
+    { name = "Pe, Steven T", email = "steven.pe25@imperial.ac.uk" }
+    { name = "Duncan, Iain", email = "iain.duncan25@imperial.ac.uk" }
+]
+keywords = ["flood prediction"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.13"
+]
+license = MIT License
+license_file = LICENSE.txt
+
+dependencies = [
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "folium",
+    "scikit-learn",
+    "xgboost",
+    "Seaborn",
+    "imblearn",
+    "geopandas",
+    "plotly",
+    "streamlit",
+    "dash"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=6.0",
+    "pytest-cov",
+    "pytest-timeout",
+]
+lint = [
+    "black",
+    "flake8"
+]
+docs = [
+    "sphinx",
+    "sphinx-rtd-theme",
+    "numpydoc"
+]
+
+[project.urls]
+Homepage = "https://example.org/ads-deluge-flood-tool"
+Repository = "https://github.com/ese-ada-lovelace-2025/acds-deluge-nene"
+
+[project.scripts]
+flood-tool = "flood_tool.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["flood_tool/*"]
+
+[tool.setuptools.package-data]
+include = ["flood_tool/resources/*"]
