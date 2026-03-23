@@ -1,8 +1,7 @@
 # Predicting the Unpredictable  
-### ACSE / EDSML Mini-Project (January 2026) -- Lee
 
 This repository contains our group solution to the **“Predicting the Unpredictable”**
-mini-project, which focuses on **machine learning for lightning storm prediction**
+project, which focuses on **Deep Learning for Lightning Storm Prediction**
 using multi-modal satellite imagery and lightning observations.
 
 The project is structured around **four independent tasks**, each addressing
